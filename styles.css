@@ -1,0 +1,38 @@
+body {
+  background-color: #001f3f;
+}
+.score-container {
+  background-color: #3d9970;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid maroon;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.player-score,
+.computer-score {
+  color: white;
+  flex: 1;
+}
+
+.results {
+  flex: 1;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win {
+  z-index: 10;
+  text-align: center;
+  background-color: aliceblue;
+  width: auto;
+  height: 1000px;
+}
