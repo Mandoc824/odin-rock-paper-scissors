@@ -67,6 +67,19 @@ function playRound(playerSelection, computerSelection) {
 function endGame() {
   if (computerScore === 5 || playerScore === 5) {
     buttons.forEach((button) => (button.disabled = true));
+    const restartButton = document.createElement("button");
+    restartButton.textContent = "Restart Game";
+    restartButton.addEventListener("click", (e) => {
+      playerScore = 0;
+      computerScore = 0;
+      computerScoreSpan.textContent = 0;
+      playerScoreSpan.textContent = 0;
+      buttons.forEach((button) => (button.disabled = false));
+      restartButton.remove();
+      results.textContent = "Start!";
+    });
+    const resultsContainer = document.querySelector(".results-container");
+    resultsContainer.appendChild(restartButton);
     if (computerScore === 5) {
       if (playerScore > 0) {
         results.textContent =
